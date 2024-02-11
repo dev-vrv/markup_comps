@@ -4,6 +4,7 @@
     "gulp-dest": "^0.2.3",
     "gulp-file-include": "^2.3.0",
     "gulp-sass": "^5.1.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "sass": "^1.70.0"
   }
 }
