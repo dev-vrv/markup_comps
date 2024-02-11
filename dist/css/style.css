@@ -1,3 +1,108 @@
-body {
-  background-color: rebeccapurple;
+body, html {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+:root {
+  --bg-dark: rgb(45, 45, 45);
+  --bg-light: rgb(240, 240, 240);
+  --bg-white: rgb(255, 255, 255);
+  --bg-none: rgba(0, 0, 0, 0);
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 1rem;
+}
+
+.p-4 {
+  padding: 2rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+
+.btn, .btn-close, .btn-dark {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.btn-dark {
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+}
+
+.btn-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.btn-close::before, .btn-close::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--bg-dark);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.btn-close::before {
+  transform: rotate(45deg);
+}
+.btn-close::after {
+  transform: rotate(-45deg);
+}
+.btn-close:hover::before, .btn-close:hover::after {
+  opacity: 0.75;
+}
+
+.dialog {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  z-index: 10;
+}
+.dialog[open] {
+  display: flex;
+}
+.dialog::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg-dark);
+  opacity: 0.5;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
